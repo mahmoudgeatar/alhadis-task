@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:share/share.dart';
 
+import 'bookSearch.dart';
 import 'hadisSavedDetails.dart';
 
 class Savings extends StatefulWidget {
@@ -45,7 +46,11 @@ class _SavingsState extends State<Savings> {
                 size: 30,
                 color: Color(0xff4EA1B5),
               ),
-              onPressed: null)
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return bookSearch();
+                }));
+              })
         ],
       ),
       body: SingleChildScrollView(
