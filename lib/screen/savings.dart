@@ -46,8 +46,8 @@ class _SavingsState extends State<Savings> {
                 size: 30,
                 color: Color(0xff4EA1B5),
               ),
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context){
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return bookSearch();
                 }));
               })
@@ -446,7 +446,7 @@ class _SavingsState extends State<Savings> {
           case PopUpMenu.copy:
             Clipboard.setData(new ClipboardData(text: 'title'));
             FlutterToast.showToast(
-                msg: "Copyed",
+                msg: "تم النسخ",
                 toastLength: Toast.LENGTH_SHORT,
                 gravity: ToastGravity.BOTTOM,
                 timeInSecForIosWeb: 1,

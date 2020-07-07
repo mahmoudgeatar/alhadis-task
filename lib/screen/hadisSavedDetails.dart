@@ -79,7 +79,7 @@ class _savingDetailsState extends State<savingDetails> {
                                     Clipboard.setData(
                                         new ClipboardData(text: 'title'));
                                     FlutterToast.showToast(
-                                        msg: "Copyed",
+                                        msg: "تم النسخ",
                                         toastLength: Toast.LENGTH_SHORT,
                                         gravity: ToastGravity.BOTTOM,
                                         timeInSecForIosWeb: 1,
@@ -408,7 +408,7 @@ class _savingDetailsState extends State<savingDetails> {
                                     Clipboard.setData(
                                         new ClipboardData(text: 'title'));
                                     FlutterToast.showToast(
-                                        msg: "Copyed",
+                                        msg: "تم النسخ",
                                         toastLength: Toast.LENGTH_SHORT,
                                         gravity: ToastGravity.BOTTOM,
                                         timeInSecForIosWeb: 1,
