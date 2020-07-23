@@ -1,3 +1,4 @@
+import 'package:alhades/widget/sectionRow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,17 +10,6 @@ class Section extends StatefulWidget {
 }
 
 class _SectionState extends State<Section> {
-  List<String> title = [
-    'المقدمة',
-    'كتاب الأيمان',
-    ' كتاب الطهارة',
-    'كتاب الحيض',
-    ' كتاب الصلاة',
-    'كتاب صلاة المسافرين و قصرها',
-    'كتاب الجمعة',
-    'كتاب صلاة الأستسقاء',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +45,7 @@ class _SectionState extends State<Section> {
           padding: const EdgeInsets.all(8.0),
           child: ListView.builder(
             shrinkWrap: true,
-            itemCount: title.length,
+            itemCount: 8,
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
@@ -66,45 +56,11 @@ class _SectionState extends State<Section> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(right: 50, bottom: 0),
-                      child: SizedBox(
-                        height: 34,
-                        width: double.infinity,
-                        child: Text(
-                          title[index],
-                          textAlign: TextAlign.right,
-                          style: TextStyle(
-                            color: Color(0xffB06544),
-                            fontSize: 20,
-                            fontFamily: 'dt',
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                        padding: const EdgeInsets.only(right: 55, top: 0),
-                        child: SizedBox(
-                          child: Text(
-                            'عدد الأبواب 16',
-                            style: TextStyle(
-                              color: Color(0xff707070),
-                              fontSize: 14,
-                              fontFamily: 'cairo-reg',
-                            ),
-                          ),
-                        )),
-                    Divider(
-                      color: Color(0xffB06544),
-                      thickness: 1.5,
-                    ),
+                    SectionRow(),
                   ],
                 ),
               );
             },
-//          separatorBuilder: (context, index) {
-//            return Divider();
-//          },
           ),
         ),
       ),

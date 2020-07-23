@@ -1,158 +1,14 @@
-import 'package:alhades/screen/homePage.dart';
+import 'package:alhades/screen/hadisSavedDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:share/share.dart';
 
-import 'bookSearch.dart';
-import 'hadisSavedDetails.dart';
-
-class Savings extends StatefulWidget {
-  @override
-  _SavingsState createState() => _SavingsState();
-}
-
 enum PopUpMenu { share, copy, remove }
 
-class _SavingsState extends State<Savings> {
-  final snackBar = SnackBar(content: Text('Yay! A SnackBar!'));
+class SavedCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Color(0xffFBFCFC),
-        leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios,
-              color: Color(0xff4EA1B5),
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            }),
-        title: Text(
-          'الحديث النبوي',
-          style: TextStyle(
-            color: Color(0xff4EA1B5),
-            fontSize: 23,
-            fontFamily: 'Sukar-black',
-          ),
-        ),
-        centerTitle: true,
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(
-                Icons.search,
-                size: 30,
-                color: Color(0xff4EA1B5),
-              ),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return bookSearch();
-                }));
-              })
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('image/homebg.png'),
-              fit: BoxFit.cover,
-              colorFilter: new ColorFilter.mode(
-                  Colors.white.withOpacity(0.3), BlendMode.dstATop),
-            ),
-          ),
-          child: Saves(),
-        ),
-      ),
-    );
-  }
-
-  Widget Saves() {
-    return Column(
-      children: <Widget>[
-        Row(
-          children: <Widget>[
-            Expanded(
-              child: SizedBox(
-                height: 50,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(6),
-                  child: FlatButton(
-                    color: Color(0xff4EA1B5),
-                    onPressed: () {
-                      setState(() {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return Savings();
-                        }));
-                      });
-                    },
-                    child: Text(
-                      'المحفوظات',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: 'Sukar-bold',
-                        color: Color(0xffF3F3F3),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              child: SizedBox(
-                height: 50,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(6),
-                  child: FlatButton(
-                    color: Color(0xffF3F3F3),
-                    onPressed: () {
-                      setState(() {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return HomePage();
-                        }));
-                      });
-                    },
-                    child: Text(
-                      'كتب الحديث',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: 'Sukar-bold',
-                        color: Color(0xff707070),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-        //card
-        card(
-            'المقدمة',
-            'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على الرسول',
-            'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على رسول الله صلى الله عليه وسلم واعلم \nوفقك الله تعالى أن الواجب على كل أحد عرف التمييز بين صحيح الروايات وسقيمها وثقات الناقلين لها من المتهمين أن لا يروي منها إلا ما عرف صحة مخارجه والستارة في ناقليه وأن يتقي منها ما كان منها عن أهل التهم والمعاندين من أهل البدع [ ص: 9 ] والدليل على أن الذي قلنا من هذا هو اللازم دون ما خالفه قول الله جل ذكره يا أيها الذين آمنوا إن جاءكم فاسق بنبإ فتبينوا أن تصيبوا قوما بجهالة فتصبحوا على ما فعلتم نادمين وقال جل ثناؤه ممن ترضون من الشهداء وقال عز وجل وأشهدوا ذوي عدل منكم فدل بما ذكرنا من هذه الآي أن خبر الفاسق ساقط غير مقبول وأن شهادة غير العدل مردودة والخبر وإن فارق معناه معنى الشهادة في بعض الوجوه فقد يجتمعان في أعظم معانيهما إذ كان خبر الفاسق غير مقبول عند أهل العلم كما أن شهادته مردودة عند جميعهم ودلت السنة على نفي رواية المنكر من الأخبار كنحو دلالة القرآن على نفي خبر الفاسق',
-            'صحيح مسلم',
-            34),
-        card(
-            'المقدمة',
-            'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على الرسول',
-            'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على رسول الله صلى الله عليه وسلم واعلم \nوفقك الله تعالى أن الواجب على كل أحد عرف التمييز بين صحيح الروايات وسقيمها وثقات الناقلين لها من المتهمين أن لا يروي منها إلا ما عرف صحة مخارجه والستارة في ناقليه وأن يتقي منها ما كان منها عن أهل التهم والمعاندين من أهل البدع [ ص: 9 ] والدليل على أن الذي قلنا من هذا هو اللازم دون ما خالفه قول الله جل ذكره يا أيها الذين آمنوا إن جاءكم فاسق بنبإ فتبينوا أن تصيبوا قوما بجهالة فتصبحوا على ما فعلتم نادمين وقال جل ثناؤه ممن ترضون من الشهداء وقال عز وجل وأشهدوا ذوي عدل منكم فدل بما ذكرنا من هذه الآي أن خبر الفاسق ساقط غير مقبول وأن شهادة غير العدل مردودة والخبر وإن فارق معناه معنى الشهادة في بعض الوجوه فقد يجتمعان في أعظم معانيهما إذ كان خبر الفاسق غير مقبول عند أهل العلم كما أن شهادته مردودة عند جميعهم ودلت السنة على نفي رواية المنكر من الأخبار كنحو دلالة القرآن على نفي خبر الفاسق',
-            'صحيح مسلم',
-            550),
-
-        SizedBox(
-          height: 30,
-        ),
-      ],
-    );
-  }
-
-  Widget card(String title, String bodyTitle, String content, String bookName,
-      int number) {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -195,7 +51,7 @@ class _SavingsState extends State<Savings> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              title,
+                              'المقدمة',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 24,
@@ -226,7 +82,7 @@ class _SavingsState extends State<Savings> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        bodyTitle,
+                        'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على الرسول',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                           color: Color(0xff191818),
@@ -249,7 +105,7 @@ class _SavingsState extends State<Savings> {
                   padding: EdgeInsets.fromLTRB(30, 0, 10, 8),
                   width: double.infinity,
                   child: Text(
-                    content,
+                    'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على رسول الله صلى الله عليه وسلم واعلم \nوفقك الله تعالى أن الواجب على كل أحد عرف التمييز بين صحيح الروايات وسقيمها وثقات الناقلين لها من المتهمين أن لا يروي منها إلا ما عرف صحة مخارجه والستارة في ناقليه وأن يتقي منها ما كان منها عن أهل التهم والمعاندين من أهل البدع [ ص: 9 ] والدليل على أن الذي قلنا من هذا هو اللازم دون ما خالفه قول الله جل ذكره يا أيها الذين آمنوا إن جاءكم فاسق بنبإ فتبينوا أن تصيبوا قوما بجهالة فتصبحوا على ما فعلتم نادمين وقال جل ثناؤه ممن ترضون من الشهداء وقال عز وجل وأشهدوا ذوي عدل منكم فدل بما ذكرنا من هذه الآي أن خبر الفاسق ساقط غير مقبول وأن شهادة غير العدل مردودة والخبر وإن فارق معناه معنى الشهادة في بعض الوجوه فقد يجتمعان في أعظم معانيهما إذ كان خبر الفاسق غير مقبول عند أهل العلم كما أن شهادته مردودة عند جميعهم ودلت السنة على نفي رواية المنكر من الأخبار كنحو دلالة القرآن على نفي خبر الفاسق',
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.right,
                     maxLines: 3,
@@ -288,7 +144,7 @@ class _SavingsState extends State<Savings> {
                             ),
                             SizedBox(height: 6),
                             Text(
-                              number.toString(),
+                              32.toString(),
                               style: TextStyle(
                                 color: Color(0xff707070),
                                 fontFamily: 'sukar-black',
@@ -324,7 +180,7 @@ class _SavingsState extends State<Savings> {
                             ),
                             SizedBox(height: 6),
                             Text(
-                              bookName,
+                              'صحيح مسلم',
                               style: TextStyle(
                                 color: Color(0xff707070),
                                 fontFamily: 'sukar-bold',
@@ -345,7 +201,7 @@ class _SavingsState extends State<Savings> {
     );
   }
 
-  Widget _popUpMenu(BuildContext context) {
+  _popUpMenu(BuildContext context) {
     return PopupMenuButton<PopUpMenu>(
       itemBuilder: (context) {
         return [

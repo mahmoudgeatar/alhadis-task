@@ -1,4 +1,3 @@
-import 'package:alhades/screen/writeNotes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -299,12 +298,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         GestureDetector(
-                          onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return WriteNotes();
-                            }));
-                          },
+                          onTap: () {},
                           child: Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
@@ -624,12 +618,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         GestureDetector(
-                          onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return WriteNotes();
-                            }));
-                          },
+                          onTap: () {},
                           child: Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(

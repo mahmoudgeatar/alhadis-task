@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           DefaultCupertinoLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        locale: Locale('ar', ''),
+        locale: Locale('en', ''),
         supportedLocales: [
           const Locale('en', 'US'), // English
           const Locale('ar', ''), // Thai

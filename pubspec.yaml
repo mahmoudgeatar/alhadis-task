@@ -75,6 +75,9 @@ flutter:
     - family: Sukar-black
       fonts:
         - asset: font/Sukar Black.ttf
+    - family: Sukar-reg
+      fonts:
+        - asset: font/Sukar Regular.ttf
     - family: cairo
       fonts:
         - asset: font/Cairo-SemiBold.ttf
@@ -95,9 +98,7 @@ flutter:
       fonts:
         - asset: font/Cairo-Regular.ttf
 
-    - family: Sukar-reg
-      fonts:
-        - asset: font/Sukar Regular.ttf
+
 
 
 

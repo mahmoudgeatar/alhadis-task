@@ -4,8 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:share/share.dart';
 
-import 'writeNotes.dart';
-
 class savingDetails extends StatefulWidget {
   @override
   _savingDetailsState createState() => _savingDetailsState();
@@ -14,22 +12,6 @@ class savingDetails extends StatefulWidget {
 class _savingDetailsState extends State<savingDetails> {
   int pageNumber = 1;
 
-  String notes =
-      'لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت '
-      'دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد'
-      ' أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات . ديواس أيوتي أريري دولار إن '
-      'ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي كايلليوم دولار أيو فيجايت نيولا باراياتيور. أيكسسيبتيور ساينت '
-      'أوككايكات كيوبايداتات نون بروايدينت ,سيونت ان كيولبا كيو أوفيسيا ديسيريونتموليت انيم'
-      ' أيدي ايست لابوريوم." "سيت يتبيرسبايكياتيس يوندي أومنيس أستي ناتيس '
-      'أيررور سيت فوليبتاتيم أكيسأنتييوم دولاريمكيو لايودانتيوم,توتام ريم أبيرأم,'
-      'أيكيو أبسا كيواي أب أللو أنفينتوري فيرأتاتيس ايت كياسي أرشيتيكتو بيتاي فيتاي ديكاتا سيونت أكسبليكابو.'
-      ' نيمو أنيم أبسام فوليوباتاتيم كيواي فوليوبتاس سايت أسبيرناتشر أيوت أودايت أيوت فيوجايت,'
-      ' سيد كيواي كونسيكيونتشر ماجناي دولارس أيوس كيواي راتاشن فوليوبتاتيم سيكيواي نيسكايونت.'
-      ' نيكيو بوررو كيوايسكيوم ايست,كيواي دولوريم ايبسيوم كيوا دولار سايت أميت, كونسيكتيتيور,أديبايسكاي فيلايت,'
-      ' سيد كيواي نون نيومكيوام ايايوس موداي تيمبورا انكايديونت يوت لابوري أيت دولار ماجنام ألايكيوام '
-      'كيوايرات فوليوبتاتيم. يوت اينايم أد مينيما فينيام, كيواس نوستريوم أكسيركايتاشيم يلامكوربوريس'
-      ' سيوسكايبيت لابورايوسام, نايساي يوت ألايكيوايد أكس أيا كوموداي كونسيكيواتشر؟ كيوايس'
-      ' أيوتيم فيل أيوم أيوري ريبريهينديرايت كيواي ان إيا فوليوبتاتي';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -327,7 +309,7 @@ class _savingDetailsState extends State<savingDetails> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(50, 12, 12, 12),
                       child: Text(
-                        notes,
+                        'الملحوظه',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             color: Color(0xff707070),
@@ -703,11 +685,7 @@ class _savingDetailsState extends State<savingDetails> {
               'image/edit.png',
               fit: BoxFit.cover,
             ),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return WriteNotes();
-              }));
-            },
+            onPressed: () {},
           ),
         ),
       ),
