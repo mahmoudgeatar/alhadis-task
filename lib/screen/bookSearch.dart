@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../style.dart';
 import 'SelectContryMobx.dart';
 
 class bookSearch extends StatefulWidget {
@@ -29,7 +30,7 @@ class _bookSearchState extends State<bookSearch> {
               Container(
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Color(0xffFBFCFC),
+                  color: appBar,
                   boxShadow: [
                     BoxShadow(color: Color(00000029), blurRadius: 1),
                   ],
@@ -42,7 +43,7 @@ class _bookSearchState extends State<bookSearch> {
                       },
                       child: Icon(
                         (Icons.arrow_back_ios),
-                        color: Color(0xff4EA1B5),
+                        color: teal,
                       ),
                     ),
                     SizedBox(width: 6),
@@ -62,8 +63,7 @@ class _bookSearchState extends State<bookSearch> {
                           selectCountry.onChanged(_, context: context);
                           setState(() {});
                         },
-                        style:
-                            TextStyle(fontSize: 14, color: Color(0xff191818)),
+                        style: TextStyle(fontSize: 14, color: darker),
                         decoration: InputDecoration(
                             prefixIcon: !selectCountry.onChange
                                 ? Wrap(
@@ -83,7 +83,7 @@ class _bookSearchState extends State<bookSearch> {
                                     },
                                     child: Icon(
                                       Icons.clear,
-                                      color: Color(0xff4EA1B5),
+                                      color: teal,
                                       size: 25,
                                     ),
                                   ),
@@ -97,18 +97,15 @@ class _bookSearchState extends State<bookSearch> {
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(25),
-                              borderSide: BorderSide(
-                                  color: Color(0xff4EA1B5), width: 1),
+                              borderSide: BorderSide(color: teal, width: 1),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(25),
-                              borderSide: BorderSide(
-                                  color: Color(0xff4EA1B5), width: 1),
+                              borderSide: BorderSide(color: teal, width: 1),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(25),
-                              borderSide: BorderSide(
-                                  color: Color(0xff4EA1B5), width: 1),
+                              borderSide: BorderSide(color: teal, width: 1),
                             )),
                       ),
                     ),
@@ -129,7 +126,7 @@ class _bookSearchState extends State<bookSearch> {
                             Text(
                               'صحيح مسلم',
                               style: TextStyle(
-                                color: Color(0xff191818),
+                                color: darker,
                                 fontSize: 16,
                                 fontFamily: 'sukar-bold',
                               ),
@@ -149,9 +146,6 @@ class _bookSearchState extends State<bookSearch> {
                       ],
                     );
                   },
-//          separatorBuilder: (context, index) {
-//            return Divider();
-//          },
                 ),
               ),
             ],

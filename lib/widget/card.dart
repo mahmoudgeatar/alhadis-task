@@ -1,4 +1,5 @@
 import 'package:alhades/screen/hadisDetails.dart';
+import 'package:alhades/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -35,7 +36,7 @@ class Cards extends StatelessWidget {
                 // header
                 Container(
                   decoration: BoxDecoration(
-                    color: Color(0xff4EA1B5),
+                    color: teal,
                     image: DecorationImage(
                       image: AssetImage('image/cardTop.png'),
                       fit: BoxFit.cover,
@@ -85,7 +86,7 @@ class Cards extends StatelessWidget {
                         'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على الرسول',
                         textAlign: TextAlign.right,
                         style: TextStyle(
-                          color: Color(0xff191818),
+                          color: darker,
                           fontSize: 12,
                           fontFamily: 'sukar-black',
                         ),
@@ -123,7 +124,7 @@ class Cards extends StatelessWidget {
                     Expanded(
                       child: Container(
                         padding: EdgeInsets.all(10),
-                        color: Color(0xffF3F3F3),
+                        color: gray,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: <Widget>[
@@ -134,7 +135,7 @@ class Cards extends StatelessWidget {
                                   'رقم الحديث',
                                   style: TextStyle(
                                     fontSize: 12,
-                                    color: Color(0xffB06544),
+                                    color: brownc,
                                     fontFamily: 'sukar-bold',
                                   ),
                                 ),
@@ -146,7 +147,7 @@ class Cards extends StatelessWidget {
                             Text(
                               32.toString(),
                               style: TextStyle(
-                                color: Color(0xff707070),
+                                color: darkGray,
                                 fontFamily: 'sukar-black',
                                 fontSize: 14,
                               ),
@@ -170,7 +171,7 @@ class Cards extends StatelessWidget {
                                   'الراوي',
                                   style: TextStyle(
                                     fontSize: 12,
-                                    color: Color(0xffB06544),
+                                    color: brownc,
                                     fontFamily: 'sukar-bold',
                                   ),
                                 ),
@@ -182,7 +183,7 @@ class Cards extends StatelessWidget {
                             Text(
                               'صحيح مسلم',
                               style: TextStyle(
-                                color: Color(0xff707070),
+                                color: darkGray,
                                 fontFamily: 'sukar-bold',
                                 fontSize: 14,
                               ),

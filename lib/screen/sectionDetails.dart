@@ -1,3 +1,4 @@
+import 'package:alhades/style.dart';
 import 'package:alhades/widget/card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +42,7 @@ class _sectionDetailsState extends State<sectionDetails> {
                       child: Text(
                         'إلغاء',
                         style: TextStyle(
-                          color: Color(0xff4EA1B5),
+                          color: teal,
                           fontSize: 16,
                           fontFamily: 'sukar-bold',
                         ),
@@ -51,7 +52,7 @@ class _sectionDetailsState extends State<sectionDetails> {
                 ],
               ),
               elevation: 0,
-              backgroundColor: Color(0xffFBFCFC),
+              backgroundColor: appBar,
               title: Container(
                 decoration: BoxDecoration(
                     color: Color(0xffFFFFFF),
@@ -67,7 +68,7 @@ class _sectionDetailsState extends State<sectionDetails> {
                     selectCountry.onChanged(_, context: context);
                     setState(() {});
                   },
-                  style: TextStyle(fontSize: 14, color: Color(0xff191818)),
+                  style: TextStyle(fontSize: 14, color: darker),
                   decoration: InputDecoration(
                       prefixIcon: !selectCountry.onChange
                           ? Wrap(
@@ -86,7 +87,7 @@ class _sectionDetailsState extends State<sectionDetails> {
                               },
                               child: Icon(
                                 Icons.clear,
-                                color: Color(0xff4EA1B5),
+                                color: teal,
                                 size: 25,
                               ),
                             ),
@@ -95,33 +96,30 @@ class _sectionDetailsState extends State<sectionDetails> {
                       hintText: "إبحث في صحيح مسلم",
                       hintStyle: TextStyle(
                         fontSize: 14,
-                        color: Color(0xffBFBFBF),
+                        color: gray,
                         fontFamily: 'sukar-bold',
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
-                        borderSide:
-                            BorderSide(color: Color(0xff4EA1B5), width: 1),
+                        borderSide: BorderSide(color: teal, width: 1),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
-                        borderSide:
-                            BorderSide(color: Color(0xff4EA1B5), width: 1),
+                        borderSide: BorderSide(color: teal, width: 1),
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
-                        borderSide:
-                            BorderSide(color: Color(0xff4EA1B5), width: 1),
+                        borderSide: BorderSide(color: teal, width: 1),
                       )),
                 ),
               ))
           : AppBar(
               elevation: 0,
-              backgroundColor: Color(0xffFBFCFC),
+              backgroundColor: appBar,
               leading: IconButton(
                   icon: Icon(
                     Icons.arrow_back_ios,
-                    color: Color(0xff4EA1B5),
+                    color: teal,
                   ),
                   onPressed: () {
                     Navigator.pop(context);
@@ -129,7 +127,7 @@ class _sectionDetailsState extends State<sectionDetails> {
               title: Text(
                 'صحيح مسلم',
                 style: TextStyle(
-                  color: Color(0xff4EA1B5),
+                  color: teal,
                   fontSize: 23,
                   fontFamily: 'Sukar-black',
                 ),
@@ -140,7 +138,7 @@ class _sectionDetailsState extends State<sectionDetails> {
                     icon: Icon(
                       Icons.search,
                       size: 30,
-                      color: Color(0xff4EA1B5),
+                      color: teal,
                     ),
                     onPressed: () {
                       setState(() {

@@ -1,6 +1,8 @@
 import 'package:alhades/widget/book.dart';
 import 'package:flutter/material.dart';
 
+import '../style.dart';
+
 class BookTab extends StatefulWidget {
   @override
   _BookTabState createState() => _BookTabState();
@@ -24,9 +26,7 @@ class _BookTabState extends State<BookTab> {
                     borderRadius: BorderRadius.circular(17),
                     gradient: LinearGradient(
                       colors: [
-                        Color(
-                          0xff4EA1B5,
-                        ),
+                        teal,
                         Color(
                           0xff2E7788,
                         ),

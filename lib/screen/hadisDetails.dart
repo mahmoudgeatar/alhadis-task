@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:share/share.dart';
 
+import '../style.dart';
+
 class hadisDetails extends StatefulWidget {
   @override
   _hadisDetailsState createState() => _hadisDetailsState();
@@ -31,7 +33,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                               IconButton(
                                   icon: Icon(
                                     Icons.arrow_back_ios,
-                                    color: Color(0xff4EA1B5),
+                                    color: teal,
                                     size: 24,
                                   ),
                                   onPressed: () {
@@ -53,7 +55,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                               IconButton(
                                   icon: Icon(
                                     Icons.content_copy,
-                                    color: Color(0xff4EA1B5),
+                                    color: teal,
                                     size: 24,
                                   ),
                                   onPressed: () {
@@ -75,7 +77,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                               Text(
                                 'المقدمة',
                                 style: TextStyle(
-                                  color: Color(0xff4EA1B5),
+                                  color: teal,
                                   fontSize: 31,
                                   fontFamily: 'dt',
                                 ),
@@ -108,7 +110,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                             'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على الرسول',
                             textAlign: TextAlign.right,
                             style: TextStyle(
-                              color: Color(0xff191818),
+                              color: darker,
                               fontSize: 12,
                               fontFamily: 'sukar-black',
                             ),
@@ -127,7 +129,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                     Container(
                       height: 5,
                       width: double.infinity,
-                      color: Color(0xff4EA1B5),
+                      color: teal,
                     ),
                     //Content body
                     Container(
@@ -169,7 +171,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                       Text(
                                         'الراوي',
                                         style: TextStyle(
-                                          color: Color(0xff191818),
+                                          color: darker,
                                           fontSize: 12,
                                           fontFamily: 'sukar-bold',
                                         ),
@@ -181,7 +183,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                   Text(
                                     'رواه ابن ماجه',
                                     style: TextStyle(
-                                      color: Color(0xffB06544),
+                                      color: brownc,
                                       fontSize: 14,
                                       fontFamily: 'sukar-bold',
                                     ),
@@ -198,7 +200,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                       Text(
                                         'المحدث',
                                         style: TextStyle(
-                                          color: Color(0xff191818),
+                                          color: darker,
                                           fontSize: 12,
                                           fontFamily: 'sukar-bold',
                                         ),
@@ -210,7 +212,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                   Text(
                                     'عبد الله بن مسعود',
                                     style: TextStyle(
-                                      color: Color(0xffB06544),
+                                      color: brownc,
                                       fontSize: 14,
                                       fontFamily: 'sukar-bold',
                                     ),
@@ -238,7 +240,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                         MediaQuery.of(context).size.height * .4,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3),
-                                      color: Color(0xff4EA1B5),
+                                      color: teal,
                                     ),
                                   ),
                                 ],
@@ -252,7 +254,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                     Container(
                       height: 5,
                       width: double.infinity,
-                      color: Color(0xff4EA1B5),
+                      color: teal,
                     ),
                     //switch pages
                     Row(
@@ -262,7 +264,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                             icon: Icon(
                               Icons.arrow_back_ios,
                               size: 14,
-                              color: Color(0xff4EA1B5),
+                              color: teal,
                             ),
                             onPressed: () {
                               setState(() {
@@ -273,7 +275,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                         Text(
                           pageNumber.toString(),
                           style: TextStyle(
-                            color: Color(0xff191818),
+                            color: darker,
                             fontSize: 14,
                             fontFamily: 'sukar-black',
                           ),
@@ -283,7 +285,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                             icon: Icon(
                               Icons.arrow_forward_ios,
                               size: 14,
-                              color: Color(0xff4EA1B5),
+                              color: teal,
                             ),
                             onPressed: () {
                               setState(() {
@@ -302,7 +304,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                           child: Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
-                                color: Color(0xff4EA1B5),
+                                color: teal,
                                 borderRadius: BorderRadius.circular(17),
                               ),
                               child: Row(
@@ -351,7 +353,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                               IconButton(
                                   icon: Icon(
                                     Icons.arrow_back_ios,
-                                    color: Color(0xff4EA1B5),
+                                    color: teal,
                                     size: 24,
                                   ),
                                   onPressed: () {
@@ -373,7 +375,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                               IconButton(
                                   icon: Icon(
                                     Icons.content_copy,
-                                    color: Color(0xff4EA1B5),
+                                    color: teal,
                                     size: 24,
                                   ),
                                   onPressed: () {
@@ -395,7 +397,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                               Text(
                                 'المقدمة',
                                 style: TextStyle(
-                                  color: Color(0xff4EA1B5),
+                                  color: teal,
                                   fontSize: 31,
                                   fontFamily: 'dt',
                                 ),
@@ -428,7 +430,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                             'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على الرسول',
                             textAlign: TextAlign.right,
                             style: TextStyle(
-                              color: Color(0xff191818),
+                              color: darker,
                               fontSize: 12,
                               fontFamily: 'sukar-black',
                             ),
@@ -447,7 +449,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                     Container(
                       height: 5,
                       width: double.infinity,
-                      color: Color(0xff4EA1B5),
+                      color: teal,
                     ),
                     //Content body
                     Container(
@@ -489,7 +491,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                       Text(
                                         'الراوي',
                                         style: TextStyle(
-                                          color: Color(0xff191818),
+                                          color: darker,
                                           fontSize: 12,
                                           fontFamily: 'sukar-bold',
                                         ),
@@ -501,7 +503,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                   Text(
                                     'رواه ابن ماجه',
                                     style: TextStyle(
-                                      color: Color(0xffB06544),
+                                      color: brownc,
                                       fontSize: 14,
                                       fontFamily: 'sukar-bold',
                                     ),
@@ -518,7 +520,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                       Text(
                                         'المحدث',
                                         style: TextStyle(
-                                          color: Color(0xff191818),
+                                          color: darker,
                                           fontSize: 12,
                                           fontFamily: 'sukar-bold',
                                         ),
@@ -530,7 +532,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                   Text(
                                     'عبد الله بن مسعود',
                                     style: TextStyle(
-                                      color: Color(0xffB06544),
+                                      color: brownc,
                                       fontSize: 14,
                                       fontFamily: 'sukar-bold',
                                     ),
@@ -548,7 +550,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                   Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3),
-                                      color: Color(0xffBFBFBF),
+                                      color: gray,
                                     ),
                                     height: MediaQuery.of(context).size.height *
                                         .85,
@@ -558,7 +560,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                                         MediaQuery.of(context).size.height * .4,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3),
-                                      color: Color(0xff4EA1B5),
+                                      color: teal,
                                     ),
                                   ),
                                 ],
@@ -572,7 +574,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                     Container(
                       height: 5,
                       width: double.infinity,
-                      color: Color(0xff4EA1B5),
+                      color: teal,
                     ),
                     //switch pages
                     Row(
@@ -582,7 +584,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                             icon: Icon(
                               Icons.arrow_back_ios,
                               size: 14,
-                              color: Color(0xff4EA1B5),
+                              color: teal,
                             ),
                             onPressed: () {
                               setState(() {
@@ -593,7 +595,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                         Text(
                           pageNumber.toString(),
                           style: TextStyle(
-                            color: Color(0xff191818),
+                            color: darker,
                             fontSize: 14,
                             fontFamily: 'sukar-black',
                           ),
@@ -603,7 +605,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                             icon: Icon(
                               Icons.arrow_forward_ios,
                               size: 14,
-                              color: Color(0xff4EA1B5),
+                              color: teal,
                             ),
                             onPressed: () {
                               setState(() {
@@ -622,7 +624,7 @@ class _hadisDetailsState extends State<hadisDetails> {
                           child: Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
-                                color: Color(0xff4EA1B5),
+                                color: teal,
                                 borderRadius: BorderRadius.circular(17),
                               ),
                               child: Row(

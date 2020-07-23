@@ -1,3 +1,4 @@
+import 'package:alhades/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
@@ -16,7 +17,7 @@ class SectionRow extends StatelessWidget {
               'المقدمة',
               textAlign: TextAlign.right,
               style: TextStyle(
-                color: Color(0xffB06544),
+                color: brownc,
                 fontSize: 20,
                 fontFamily: 'dt',
               ),
@@ -29,14 +30,14 @@ class SectionRow extends StatelessWidget {
               child: Text(
                 'عدد الأبواب 16',
                 style: TextStyle(
-                  color: Color(0xff707070),
+                  color: darkGray,
                   fontSize: 14,
                   fontFamily: 'cairo-reg',
                 ),
               ),
             )),
         Divider(
-          color: Color(0xffB06544),
+          color: brownc,
           thickness: 1.5,
         ),
       ],

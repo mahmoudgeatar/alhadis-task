@@ -1,3 +1,4 @@
+import 'package:alhades/style.dart';
 import 'package:alhades/tabs/bookTab.dart';
 import 'package:alhades/tabs/saved.dart';
 import 'package:flutter/material.dart';
@@ -27,17 +28,17 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color(0xffFBFCFC),
+        backgroundColor: appBar,
         leading: IconButton(
             icon: Icon(
               Icons.arrow_back_ios,
-              color: Color(0xff4EA1B5),
+              color: teal,
             ),
             onPressed: () {}),
         title: Text(
           'الحديث النبوي',
           style: TextStyle(
-            color: Color(0xff4EA1B5),
+            color: teal,
             fontSize: 23,
             fontFamily: 'Sukar-black',
           ),
@@ -71,17 +72,14 @@ class _HomePageState extends State<HomePage>
                   child: Container(
                     width: double.infinity,
                     height: double.infinity,
-                    color:
-                        (selected == 1) ? Color(0xffF3F3F3) : Color(0xff4EA1B5),
+                    color: (selected == 1) ? gray : teal,
                     child: Center(
                       child: Text(
                         'المحفوظات',
                         style: TextStyle(
                           fontSize: 14,
                           fontFamily: 'Sukar-bold',
-                          color: (selected == 1)
-                              ? Color(0xff707070)
-                              : Colors.white,
+                          color: (selected == 1) ? darkGray : Colors.white,
                         ),
                       ),
                     ),
@@ -91,17 +89,14 @@ class _HomePageState extends State<HomePage>
                   child: Container(
                     width: double.infinity,
                     height: double.infinity,
-                    color:
-                        (selected == 0) ? Color(0xffF3F3F3) : Color(0xff4EA1B5),
+                    color: (selected == 0) ? gray : teal,
                     child: Center(
                       child: Text(
                         "كتب الحديث",
                         style: TextStyle(
                           fontSize: 14,
                           fontFamily: 'Sukar-bold',
-                          color: (selected == 0)
-                              ? Color(0xff707070)
-                              : Colors.white,
+                          color: (selected == 0) ? darkGray : Colors.white,
                         ),
                       ),
                     ),

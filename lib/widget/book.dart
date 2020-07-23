@@ -1,6 +1,8 @@
 import 'package:alhades/screen/sections.dart';
 import 'package:flutter/material.dart';
 
+import '../style.dart';
+
 class Book extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -44,7 +46,7 @@ class Book extends StatelessWidget {
                             Text(
                               'صحيح مسلم',
                               style: TextStyle(
-                                color: Color(0xff191818),
+                                color: darker,
                                 fontFamily: 'cairo-bold',
                                 fontSize: 16,
                               ),
@@ -56,14 +58,14 @@ class Book extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontFamily: 'cairo-reg',
-                                color: Color(0xff191818),
+                                color: darker,
                               ),
                             ),
                             SizedBox(height: 12),
                             Container(
                               height: 67,
                               width: double.infinity,
-                              color: Color(0xffF3F3F3),
+                              color: gray,
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -74,7 +76,7 @@ class Book extends StatelessWidget {
                                       Text(
                                         'عدد الأحاديث',
                                         style: TextStyle(
-                                          color: Color(0xffB06544),
+                                          color: brownc,
                                           fontFamily: 'cairo',
                                           fontSize: 14,
                                         ),
@@ -84,7 +86,7 @@ class Book extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 18,
                                           fontFamily: 'cairo-black',
-                                          color: Color(0xff191818),
+                                          color: darker,
                                         ),
                                       ),
                                     ],
@@ -95,7 +97,7 @@ class Book extends StatelessWidget {
                                       Text(
                                         'عدد الكتب',
                                         style: TextStyle(
-                                          color: Color(0xffB06544),
+                                          color: brownc,
                                           fontFamily: 'cairo',
                                           fontSize: 14,
                                         ),
@@ -105,7 +107,7 @@ class Book extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 18,
                                           fontFamily: 'cairo-black',
-                                          color: Color(0xff191818),
+                                          color: darker,
                                         ),
                                       ),
                                     ],
@@ -116,7 +118,7 @@ class Book extends StatelessWidget {
                                       Text(
                                         'عدد الصفحات',
                                         style: TextStyle(
-                                          color: Color(0xffB06544),
+                                          color: brownc,
                                           fontFamily: 'cairo',
                                           fontSize: 14,
                                         ),
@@ -126,7 +128,7 @@ class Book extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 18,
                                           fontFamily: 'cairo-black',
-                                          color: Color(0xff191818),
+                                          color: darker,
                                         ),
                                       ),
                                     ],
@@ -142,7 +144,7 @@ class Book extends StatelessWidget {
                                   height: 34,
                                   width: 120,
                                   child: FlatButton(
-                                    color: Color(0xff4EA1B5),
+                                    color: teal,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(17),
                                     ),
@@ -171,7 +173,7 @@ class Book extends StatelessWidget {
                       child: IconButton(
                           icon: Icon(
                             Icons.clear,
-                            color: Color(0xff4EA1B5),
+                            color: teal,
                             size: 30,
                           ),
                           onPressed: () {
@@ -197,7 +199,7 @@ class Book extends StatelessWidget {
               'صحيح مسلم',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Color(0xff191818),
+                color: darker,
                 fontSize: 16,
                 fontFamily: 'cairo',
               ),

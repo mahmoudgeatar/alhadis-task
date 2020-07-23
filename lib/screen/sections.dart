@@ -1,3 +1,4 @@
+import 'package:alhades/style.dart';
 import 'package:alhades/widget/sectionRow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,19 +15,19 @@ class _SectionState extends State<Section> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xffFBFCFC),
+        backgroundColor: appBar,
         elevation: .3,
         title: Text(
           'تقسيم الكتاب',
           style: TextStyle(
-            color: Color(0xff4EA1B5),
+            color: teal,
             fontSize: 23,
             fontFamily: 'sukar-black',
           ),
         ),
         centerTitle: true,
         leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios, color: Color(0xff4EA1B5)),
+            icon: Icon(Icons.arrow_back_ios, color: teal),
             onPressed: () {
               Navigator.pop(context);
             }),

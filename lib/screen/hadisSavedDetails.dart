@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:share/share.dart';
 
+import '../style.dart';
+
 class savingDetails extends StatefulWidget {
   @override
   _savingDetailsState createState() => _savingDetailsState();
@@ -32,7 +34,7 @@ class _savingDetailsState extends State<savingDetails> {
                               IconButton(
                                   icon: Icon(
                                     Icons.arrow_back_ios,
-                                    color: Color(0xff4EA1B5),
+                                    color: teal,
                                     size: 24,
                                   ),
                                   onPressed: () {
@@ -54,7 +56,7 @@ class _savingDetailsState extends State<savingDetails> {
                               IconButton(
                                   icon: Icon(
                                     Icons.content_copy,
-                                    color: Color(0xff4EA1B5),
+                                    color: teal,
                                     size: 24,
                                   ),
                                   onPressed: () {
@@ -76,7 +78,7 @@ class _savingDetailsState extends State<savingDetails> {
                               Text(
                                 'المقدمة',
                                 style: TextStyle(
-                                  color: Color(0xff4EA1B5),
+                                  color: teal,
                                   fontSize: 31,
                                   fontFamily: 'dt',
                                 ),
@@ -109,7 +111,7 @@ class _savingDetailsState extends State<savingDetails> {
                             'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على الرسول',
                             textAlign: TextAlign.right,
                             style: TextStyle(
-                              color: Color(0xff191818),
+                              color: darker,
                               fontSize: 12,
                               fontFamily: 'sukar-black',
                             ),
@@ -128,7 +130,7 @@ class _savingDetailsState extends State<savingDetails> {
                     Container(
                       height: 5,
                       width: double.infinity,
-                      color: Color(0xff4EA1B5),
+                      color: teal,
                     ),
                     //Content body
                     Container(
@@ -170,7 +172,7 @@ class _savingDetailsState extends State<savingDetails> {
                                       Text(
                                         'الراوي',
                                         style: TextStyle(
-                                          color: Color(0xff191818),
+                                          color: darker,
                                           fontSize: 12,
                                           fontFamily: 'sukar-bold',
                                         ),
@@ -182,7 +184,7 @@ class _savingDetailsState extends State<savingDetails> {
                                   Text(
                                     'رواه ابن ماجه',
                                     style: TextStyle(
-                                      color: Color(0xffB06544),
+                                      color: brownc,
                                       fontSize: 14,
                                       fontFamily: 'sukar-bold',
                                     ),
@@ -199,7 +201,7 @@ class _savingDetailsState extends State<savingDetails> {
                                       Text(
                                         'المحدث',
                                         style: TextStyle(
-                                          color: Color(0xff191818),
+                                          color: darker,
                                           fontSize: 12,
                                           fontFamily: 'sukar-bold',
                                         ),
@@ -211,7 +213,7 @@ class _savingDetailsState extends State<savingDetails> {
                                   Text(
                                     'عبد الله بن مسعود',
                                     style: TextStyle(
-                                      color: Color(0xffB06544),
+                                      color: brownc,
                                       fontSize: 14,
                                       fontFamily: 'sukar-bold',
                                     ),
@@ -229,7 +231,7 @@ class _savingDetailsState extends State<savingDetails> {
                                   Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3),
-                                      color: Color(0xffBFBFBF),
+                                      color: gray,
                                     ),
                                     height: MediaQuery.of(context).size.height *
                                         .85,
@@ -239,7 +241,7 @@ class _savingDetailsState extends State<savingDetails> {
                                         MediaQuery.of(context).size.height * .4,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3),
-                                      color: Color(0xff4EA1B5),
+                                      color: teal,
                                     ),
                                   ),
                                 ],
@@ -253,7 +255,7 @@ class _savingDetailsState extends State<savingDetails> {
                     Container(
                       height: 5,
                       width: double.infinity,
-                      color: Color(0xff4EA1B5),
+                      color: teal,
                     ),
                     //switch pages
                     Row(
@@ -263,7 +265,7 @@ class _savingDetailsState extends State<savingDetails> {
                             icon: Icon(
                               Icons.arrow_back_ios,
                               size: 14,
-                              color: Color(0xff4EA1B5),
+                              color: teal,
                             ),
                             onPressed: () {
                               setState(() {
@@ -274,7 +276,7 @@ class _savingDetailsState extends State<savingDetails> {
                         Text(
                           pageNumber.toString(),
                           style: TextStyle(
-                            color: Color(0xff191818),
+                            color: darker,
                             fontSize: 14,
                             fontFamily: 'sukar-black',
                           ),
@@ -284,7 +286,7 @@ class _savingDetailsState extends State<savingDetails> {
                             icon: Icon(
                               Icons.arrow_forward_ios,
                               size: 14,
-                              color: Color(0xff4EA1B5),
+                              color: teal,
                             ),
                             onPressed: () {
                               setState(() {
@@ -299,7 +301,7 @@ class _savingDetailsState extends State<savingDetails> {
                       child: Text(
                         'ملاحظاتك',
                         style: TextStyle(
-                          color: Color(0xffB06544),
+                          color: brownc,
                           fontSize: 16,
                           fontFamily: 'sukar-bold',
                         ),
@@ -312,7 +314,7 @@ class _savingDetailsState extends State<savingDetails> {
                         'الملحوظه',
                         textAlign: TextAlign.right,
                         style: TextStyle(
-                            color: Color(0xff707070),
+                            color: darkGray,
                             fontSize: 14,
                             fontFamily: 'cairo-reg'),
                       ),
@@ -322,7 +324,7 @@ class _savingDetailsState extends State<savingDetails> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         FlatButton(
-                          color: Color(0xff4EA1B5),
+                          color: teal,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(17),
                           ),
@@ -361,7 +363,7 @@ class _savingDetailsState extends State<savingDetails> {
                               IconButton(
                                   icon: Icon(
                                     Icons.arrow_back_ios,
-                                    color: Color(0xff4EA1B5),
+                                    color: teal,
                                     size: 24,
                                   ),
                                   onPressed: () {
@@ -383,7 +385,7 @@ class _savingDetailsState extends State<savingDetails> {
                               IconButton(
                                   icon: Icon(
                                     Icons.content_copy,
-                                    color: Color(0xff4EA1B5),
+                                    color: teal,
                                     size: 24,
                                   ),
                                   onPressed: () {
@@ -405,7 +407,7 @@ class _savingDetailsState extends State<savingDetails> {
                               Text(
                                 'المقدمة',
                                 style: TextStyle(
-                                  color: Color(0xff4EA1B5),
+                                  color: teal,
                                   fontSize: 31,
                                   fontFamily: 'dt',
                                 ),
@@ -438,7 +440,7 @@ class _savingDetailsState extends State<savingDetails> {
                             'باب وجوب الرواية عن الثقات وترك الكذابين والتحذير من \nالكذب على الرسول',
                             textAlign: TextAlign.right,
                             style: TextStyle(
-                              color: Color(0xff191818),
+                              color: darker,
                               fontSize: 12,
                               fontFamily: 'sukar-black',
                             ),
@@ -457,7 +459,7 @@ class _savingDetailsState extends State<savingDetails> {
                     Container(
                       height: 5,
                       width: double.infinity,
-                      color: Color(0xff4EA1B5),
+                      color: teal,
                     ),
                     //Content body
                     Container(
@@ -499,7 +501,7 @@ class _savingDetailsState extends State<savingDetails> {
                                       Text(
                                         'الراوي',
                                         style: TextStyle(
-                                          color: Color(0xff191818),
+                                          color: darker,
                                           fontSize: 12,
                                           fontFamily: 'sukar-bold',
                                         ),
@@ -511,7 +513,7 @@ class _savingDetailsState extends State<savingDetails> {
                                   Text(
                                     'رواه ابن ماجه',
                                     style: TextStyle(
-                                      color: Color(0xffB06544),
+                                      color: brownc,
                                       fontSize: 14,
                                       fontFamily: 'sukar-bold',
                                     ),
@@ -528,7 +530,7 @@ class _savingDetailsState extends State<savingDetails> {
                                       Text(
                                         'المحدث',
                                         style: TextStyle(
-                                          color: Color(0xff191818),
+                                          color: darker,
                                           fontSize: 12,
                                           fontFamily: 'sukar-bold',
                                         ),
@@ -540,7 +542,7 @@ class _savingDetailsState extends State<savingDetails> {
                                   Text(
                                     'عبد الله بن مسعود',
                                     style: TextStyle(
-                                      color: Color(0xffB06544),
+                                      color: brownc,
                                       fontSize: 14,
                                       fontFamily: 'sukar-bold',
                                     ),
@@ -558,7 +560,7 @@ class _savingDetailsState extends State<savingDetails> {
                                   Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3),
-                                      color: Color(0xffBFBFBF),
+                                      color: gray,
                                     ),
                                     height: MediaQuery.of(context).size.height *
                                         .85,
@@ -568,7 +570,7 @@ class _savingDetailsState extends State<savingDetails> {
                                         MediaQuery.of(context).size.height * .4,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(3),
-                                      color: Color(0xff4EA1B5),
+                                      color: teal,
                                     ),
                                   ),
                                 ],
@@ -582,7 +584,7 @@ class _savingDetailsState extends State<savingDetails> {
                     Container(
                       height: 5,
                       width: double.infinity,
-                      color: Color(0xff4EA1B5),
+                      color: teal,
                     ),
                     //switch pages
                     Row(
@@ -592,7 +594,7 @@ class _savingDetailsState extends State<savingDetails> {
                             icon: Icon(
                               Icons.arrow_back_ios,
                               size: 14,
-                              color: Color(0xff4EA1B5),
+                              color: teal,
                             ),
                             onPressed: () {
                               setState(() {
@@ -603,7 +605,7 @@ class _savingDetailsState extends State<savingDetails> {
                         Text(
                           pageNumber.toString(),
                           style: TextStyle(
-                            color: Color(0xff191818),
+                            color: darker,
                             fontSize: 14,
                             fontFamily: 'sukar-black',
                           ),
@@ -613,7 +615,7 @@ class _savingDetailsState extends State<savingDetails> {
                             icon: Icon(
                               Icons.arrow_forward_ios,
                               size: 14,
-                              color: Color(0xff4EA1B5),
+                              color: teal,
                             ),
                             onPressed: () {
                               setState(() {
@@ -628,7 +630,7 @@ class _savingDetailsState extends State<savingDetails> {
                       child: Text(
                         'ملاحظاتك',
                         style: TextStyle(
-                          color: Color(0xffB06544),
+                          color: brownc,
                           fontSize: 16,
                           fontFamily: 'sukar-bold',
                         ),
@@ -641,7 +643,7 @@ class _savingDetailsState extends State<savingDetails> {
                         'لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات . ديواس أيوتي أريري دولار إن ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي كايلليوم دولار أيو فيجايت نيولا باراياتيور. أيكسسيبتيور ساينت أوككايكات كيوبايداتات نون بروايدينت ,سيونت ان كيولبا كيو أوفيسيا ديسيريونتموليت انيم أيدي ايست لابوريوم." "سيت يتبيرسبايكياتيس يوندي أومنيس أستي ناتيس أيررور سيت فوليبتاتيم أكيسأنتييوم دولاريمكيو لايودانتيوم,توتام ريم أبيرأم,أيكيو أبسا كيواي أب أللو أنفينتوري فيرأتاتيس ايت كياسي أرشيتيكتو بيتاي فيتاي ديكاتا سيونت أكسبليكابو. نيمو أنيم أبسام فوليوباتاتيم كيواي فوليوبتاس سايت أسبيرناتشر أيوت أودايت أيوت فيوجايت, سيد كيواي كونسيكيونتشر ماجناي دولارس أيوس كيواي راتاشن فوليوبتاتيم سيكيواي نيسكايونت. نيكيو بوررو كيوايسكيوم ايست,كيواي دولوريم ايبسيوم كيوا دولار سايت أميت, كونسيكتيتيور,أديبايسكاي فيلايت, سيد كيواي نون نيومكيوام ايايوس موداي تيمبورا انكايديونت يوت لابوري أيت دولار ماجنام ألايكيوام كيوايرات فوليوبتاتيم. يوت اينايم أد مينيما فينيام, كيواس نوستريوم أكسيركايتاشيم يلامكوربوريس سيوسكايبيت لابورايوسام, نايساي يوت ألايكيوايد أكس أيا كوموداي كونسيكيواتشر؟ كيوايس أيوتيم فيل أيوم أيوري ريبريهينديرايت كيواي ان إيا فوليوبتاتي',
                         textAlign: TextAlign.right,
                         style: TextStyle(
-                            color: Color(0xff707070),
+                            color: darkGray,
                             fontSize: 14,
                             fontFamily: 'cairo-reg'),
                       ),
@@ -651,7 +653,7 @@ class _savingDetailsState extends State<savingDetails> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         FlatButton(
-                          color: Color(0xff4EA1B5),
+                          color: teal,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(17),
                           ),
@@ -680,7 +682,7 @@ class _savingDetailsState extends State<savingDetails> {
           width: 42,
           height: 42,
           child: FloatingActionButton(
-            backgroundColor: Color(0xff4EA1B5),
+            backgroundColor: teal,
             child: Image.asset(
               'image/edit.png',
               fit: BoxFit.cover,
